@@ -13,15 +13,8 @@ public:
         int n = rooms.size(); 
         vector<int>vis(n+1);
         dfs(0,vis,rooms);
-        int cnt= 0 ; 
-        for (int i = 0 ; i<n ; i++)
-            if(vis[i]==1){
-                continue ; 
-            }
-        else{
-            return 0 ; 
-        }
-        return 1;
+        int cnt= count(vis.begin(),vis.end(),1);
+        return cnt==n; 
         
     }
 };
