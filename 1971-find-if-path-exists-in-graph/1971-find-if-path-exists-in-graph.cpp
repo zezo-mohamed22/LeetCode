@@ -8,14 +8,14 @@ public:
         }
         queue<int>q;
         q.push(source);
-        map<int,int>mp;
+        vector<int>mp(n+1);
         mp[source]=1;
         while(!q.empty()){
             auto it = q.front();
             q.pop();
             if(it==destination)return true ;
             for (auto i : adj[it]){
-            if (mp.find(i)==mp.end()){
+            if (!mp[i]){
                 
 q.push(i);
                 mp[i]=1;
