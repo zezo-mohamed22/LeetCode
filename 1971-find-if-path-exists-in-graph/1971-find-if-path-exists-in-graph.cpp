@@ -8,7 +8,7 @@ public:
         }
         queue<int>q;
         q.push(source);
-        vector<int>mp(n+1);
+        vector<bool>mp(n+1);
         mp[source]=1;
         while(!q.empty()){
             auto it = q.front();
